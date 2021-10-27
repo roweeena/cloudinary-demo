@@ -1,0 +1,17 @@
+<%= form_for(@brand, :html => {:multipart => true}) do |f|%>
+
+  <%= f.label "brand name:" %>
+  <%= f.text_field :name %>
+
+  <%# single image upload %>
+
+  <%# f.label "brand image:" %>
+  <%# f.file_field :image %>
+
+  <%# multi-image upload %>
+
+  <%= f.label "brand image:" %>
+  <%= f.file_field :images, :multiple => true %>
+
+  <%= f.submit "Add brand" %>
+<% end %>
